@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "GitHub Link Sense",
+  "version": "1.0.0",
+
+  "description": "todo",
+
+  "content_scripts": [
+    {
+      "matches": ["*://github.com/*"],
+      "js": ["deps/jquery-3.3.1.min.js", "index.js"],
+      "css": ["style.css"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "permissions": [
+    "*://github.com/*", "tabs", "webNavigation"
+  ]
+}
